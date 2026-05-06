@@ -91,7 +91,6 @@ class ConvertService(AsyncService):
             except subprocess.TimeoutExpired:
                 p.kill()
                 logging.info("ebook-convert timeout: %s" % new_path)
-                log.info("ebook-convert timeout: %s" % new_path)
                 log.write("\n服务器转换书本格式时超时了。请在配置管理页面调大超时时间。\n[FINISH]")
                 return False
             return True
